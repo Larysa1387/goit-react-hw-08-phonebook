@@ -1,0 +1,40 @@
+{
+  "contacts": [
+    {
+      "id": "id-1",
+      "name": "Rosie Simpson",
+      "number": "459-12-56",
+      "contactType": "work"
+    },
+    {
+      "id": "id-2",
+      "name": "Hermione Kline",
+      "number": "443-89-12",
+      "contactType": "home"
+    },
+    {
+      "id": "id-3",
+      "name": "Eden Clements",
+      "number": "645-17-79",
+      "contactType": "other"
+    },
+    {
+      "id": "id-4",
+      "name": "Annie Copeland",
+      "number": "227-91-26",
+      "contactType": "work"
+    },
+    {
+      "name": "Clio Mikky",
+      "number": "4564456454",
+      "contactType": "work",
+      "id": "cv7xoaK"
+    },
+    {
+      "name": "Alice in Wonderland",
+      "number": "+384564678",
+      "contactType": "home",
+      "id": "iHbs4wL"
+    }
+  ]
+}
