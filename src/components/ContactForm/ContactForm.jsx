@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { getContacts, getLoader } from "redux/contacts-selectors";
-import * as contactsOperations from "redux/contacts-operations";
+import { getContacts, getLoader } from "redux/contacts/contacts-selectors";
+import * as contactsOperations from "redux/contacts/contacts-operations";
 import PropTypes from "prop-types";
 import shortid from "shortid";
 import s from "./ContactForm.module.css";

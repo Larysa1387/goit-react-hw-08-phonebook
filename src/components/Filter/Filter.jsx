@@ -2,12 +2,10 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { useSelector, useDispatch } from "react-redux";
 
-// import { connect } from "react-redux";
-import { getFilter } from "../../redux/contacts-selectors";
-import { changeFilter } from "../../redux/contacts-actions";
+import { getFilter } from "../../redux/contacts/contacts-selectors";
+import { changeFilter } from "../../redux/contacts/contacts-actions";
 import s from "./Filter.module.css";
 
-// { value, onChange }
 const Filter = () => {
   const filter = useSelector(getFilter);
   const dispatch = useDispatch();
@@ -31,11 +29,4 @@ const Filter = () => {
 //   onChange: PropTypes.func.isRequired,
 // };
 
-// const mapStateToProps = state => ({
-//   value: state.contacts.filter,
-// });
-
-// const mapDispatchToProps = dispatch => ({
-//   onChange: e => dispatch(changeFilter(e.target.value)),
-// });
 export default Filter;
