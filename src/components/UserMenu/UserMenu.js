@@ -1,3 +1,7 @@
+import { useSelector } from "react-redux";
+import { authSelectors } from "redux/auth";
+import defaultAvatar from "../icons/dungeon.svg";
+
 const styles = {
   container: {
     display: "flex",
@@ -14,9 +18,11 @@ const styles = {
 };
 
 export default function UserMenu() {
+  const name = useSelector(authSelectors.getUserName);
   return (
     <div style={styles.container}>
-      <h3 style={styles.name}>Hello, email</h3>
+      <img src={defaultAvatar} alt="" width="32" style={styles.avatar} />
+      <h3 style={styles.name}>Hello, {name}</h3>
       <button type="button" onClick={() => {}}>
         Log Out
       </button>
