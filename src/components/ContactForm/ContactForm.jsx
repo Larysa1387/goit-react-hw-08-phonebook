@@ -10,7 +10,6 @@ import s from "./ContactForm.module.css";
 function ContactForm() {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
-  const [contactType, setContactType] = useState("home");
   const contacts = useSelector(getContacts);
   const loader = useSelector(getLoader);
   const dispatch = useDispatch();
@@ -24,14 +23,13 @@ function ContactForm() {
       alert(`${name} is already exists in contacts`);
       return;
     }
-    dispatch(contactsOperations.fetchAddContact({ name, number, contactType }));
+    dispatch(contactsOperations.fetchAddContact({ name, number }));
     reset();
   };
 
   const reset = () => {
     setName("");
     setNumber("");
-    setContactType("home");
   };
 
   const handleInputChange = e => {
@@ -42,9 +40,6 @@ function ContactForm() {
         break;
       case "number":
         setNumber(value);
-        break;
-      case "contactType":
-        setContactType(value);
         break;
       default:
         return;
@@ -84,39 +79,6 @@ function ContactForm() {
             placeholder="+380..."
             onChange={handleInputChange}
           />
-        </label>
-      </div>
-      <p className={s.radioTitle}>Choose type of contact</p>
-      <div className={s.radioAlign}>
-        <label className={s.radioLabel}>
-          <input
-            type="radio"
-            name="contactType"
-            value="home"
-            onChange={handleInputChange}
-            checked={contactType === "home"}
-          />
-          Home
-        </label>
-        <label className={s.radioLabel}>
-          <input
-            type="radio"
-            name="contactType"
-            value="work"
-            onChange={handleInputChange}
-            checked={contactType === "work"}
-          />
-          Work
-        </label>
-        <label className={s.radioLabel}>
-          <input
-            type="radio"
-            name="contactType"
-            value="other"
-            onChange={handleInputChange}
-            checked={contactType === "other"}
-          />
-          Other
         </label>
       </div>
       <button className={s.btnSubmit} type="submit" disabled={!name}>

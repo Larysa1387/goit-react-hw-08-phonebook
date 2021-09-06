@@ -1,5 +1,5 @@
-import { useSelector } from "react-redux";
-import { authSelectors } from "redux/auth";
+import { useSelector, useDispatch } from "react-redux";
+import { authOperations, authSelectors } from "redux/auth";
 import defaultAvatar from "../icons/dungeon.svg";
 
 const styles = {
@@ -19,11 +19,18 @@ const styles = {
 
 export default function UserMenu() {
   const name = useSelector(authSelectors.getUserName);
+  const dispatch = useDispatch();
+
   return (
     <div style={styles.container}>
       <img src={defaultAvatar} alt="" width="32" style={styles.avatar} />
       <h3 style={styles.name}>Hello, {name}</h3>
-      <button type="button" onClick={() => {}}>
+      <button
+        type="button"
+        onClick={() => {
+          dispatch(authOperations.logOut());
+        }}
+      >
         Log Out
       </button>
     </div>

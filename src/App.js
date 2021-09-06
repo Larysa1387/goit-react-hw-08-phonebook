@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import ContactForm from "./components/ContactForm";
 import ContactList from "./components/ContactList";
 import Filter from "./components/Filter";
-import "./App.css";
 import AppBar from "components/AppBar/AppBar";
 import HomeView from "views/HomeView";
 import LoginView from "views/LoginView";
 import RegisterView from "views/RegisterView";
+import "./App.css";
+import { authOperations } from "redux/auth";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(authOperations.fetchCurrentUser());
+  }, [dispatch]);
   return (
     <>
       <AppBar />
