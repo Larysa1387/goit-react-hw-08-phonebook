@@ -1,18 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { authOperations } from "redux/auth";
-
-const styles = {
-  form: {
-    width: 320,
-    marginLeft: 50,
-  },
-  label: {
-    display: "flex",
-    flexDirection: "column",
-    marginBottom: 15,
-  },
-};
+import s from "./Views.module.css";
 
 export default function RegisterView() {
   const [name, setName] = useState("");
@@ -43,18 +32,25 @@ export default function RegisterView() {
   };
 
   return (
-    <div>
-      <h1>Registration page</h1>
+    <div className={s.align}>
+      <h2 className={s.page_title}>Registration page</h2>
 
-      <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>
+      <form onSubmit={handleSubmit} className={s.form} autoComplete="off">
+        <label className={s.label}>
           Name
-          <input type="text" name="name" value={name} onChange={handleChange} />
+          <input
+            className={s.input}
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+          />
         </label>
 
-        <label style={styles.label}>
+        <label className={s.label}>
           Email
           <input
+            className={s.input}
             type="email"
             name="email"
             value={email}
@@ -62,9 +58,10 @@ export default function RegisterView() {
           />
         </label>
 
-        <label style={styles.label}>
+        <label className={s.label}>
           Password
           <input
+            className={s.input}
             type="password"
             name="password"
             value={password}
@@ -72,7 +69,9 @@ export default function RegisterView() {
           />
         </label>
 
-        <button type="submit">Register</button>
+        <button className={s.btn_submit} type="submit">
+          Register
+        </button>
       </form>
     </div>
   );

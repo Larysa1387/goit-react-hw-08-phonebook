@@ -6,9 +6,7 @@ import ContactForm from "./components/ContactForm";
 import ContactList from "./components/ContactList";
 import Filter from "./components/Filter";
 import AppBar from "components/AppBar/AppBar";
-// import HomeView from "views/HomeView";
-// import LoginView from "views/LoginView";
-// import RegisterView from "views/RegisterView";
+
 import "./App.css";
 import { authOperations, authSelectors } from "redux/auth";
 import PrivateRoute from "components/PrivateRoute";
@@ -43,10 +41,10 @@ function App() {
               <LoginView />
             </PublicRoute>
             <PrivateRoute path="/contacts" redirectTo="/login">
-              <div className="App">
-                <h1 className="App-header">Phonebook</h1>
+              <div className="phoneBook-container">
+                <h1 className="phoneBook-header">Phonebook</h1>
                 <ContactForm />
-                <h2 className="App-header">Contacts</h2>
+                <h2 className="phoneBook-header">Contacts</h2>
                 <Filter />
                 <ContactList />
               </div>

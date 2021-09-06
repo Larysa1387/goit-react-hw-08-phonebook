@@ -1,37 +1,25 @@
 import { useSelector, useDispatch } from "react-redux";
 import { authOperations, authSelectors } from "redux/auth";
 import defaultAvatar from "../icons/dungeon.svg";
-
-const styles = {
-  container: {
-    display: "flex",
-    alignItems: "center",
-    marginRight: 10,
-  },
-  avatar: {
-    marginRight: 4,
-  },
-  name: {
-    fontWeight: 700,
-    marginRight: 12,
-  },
-};
+import ExitToAppRoundedIcon from "@material-ui/icons/ExitToAppRounded";
+import s from "./UserMenu.module.css";
 
 export default function UserMenu() {
   const name = useSelector(authSelectors.getUserName);
   const dispatch = useDispatch();
 
   return (
-    <div style={styles.container}>
-      <img src={defaultAvatar} alt="" width="32" style={styles.avatar} />
-      <h3 style={styles.name}>Hello, {name}</h3>
+    <div className={s.container}>
+      <img src={defaultAvatar} alt="" width="32" className={s.avatar} />
+      <h3 className={s.name}>Hello, {name}</h3>
       <button
+        className={s.logOut_btn}
         type="button"
         onClick={() => {
           dispatch(authOperations.logOut());
         }}
       >
-        Log Out
+        <ExitToAppRoundedIcon />
       </button>
     </div>
   );

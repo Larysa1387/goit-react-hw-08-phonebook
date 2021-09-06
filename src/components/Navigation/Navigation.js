@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import { NavLink } from "react-router-dom";
 import { authSelectors } from "redux/auth";
 
@@ -8,10 +9,11 @@ const styles = {
     textDecoration: "none",
     padding: 12,
     fontWeight: 700,
-    color: "#2A363B",
+    color: "rgb(59, 11, 73)",
+    fontSize: "1.17em",
   },
   activeLink: {
-    color: "#E84A5F",
+    color: "rgba(131, 30, 131, 0.712)",
   },
 };
 
@@ -20,7 +22,7 @@ export default function Navigation() {
   return (
     <div>
       <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
-        Home
+        <HomeRoundedIcon />
       </NavLink>
       {isLoggedIn && (
         <NavLink

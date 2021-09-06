@@ -15,7 +15,7 @@
 }
 
 .formInput {
-  width: 255px;
+  width: 500px;
   padding: 10px 10px;
   border: 1px solid rgba(131, 30, 131, 0.712);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -86,6 +86,7 @@ input[type="radio"]:checked:after {
 .btnSubmit {
   width: 240px;
   height: 40px;
+  margin-top: 12px;
   border-radius: 2px;
   color: rgb(59, 11, 73);
   background-color: rgba(209, 174, 174, 0.39);

@@ -1,15 +1,15 @@
-.App {
+.phoneBook-container {
   text-align: center;
   background-color: #ebe5be9d;
-  width: 380px;
+  width: 700px;
   margin: 10px auto;
   border: 1px solid #282c34a8;
 }
 
-.App-header {
+.phoneBook-header {
   margin: 0;
   background-color: #282c34a8;
-  min-height: 10vh;
+  min-height: 14vh;
   display: flex;
   flex-direction: column;
   align-items: center;
