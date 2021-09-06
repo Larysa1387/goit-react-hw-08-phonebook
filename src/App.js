@@ -1,17 +1,16 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import { Switch } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { authOperations, authSelectors } from "redux/auth";
 
 import ContactForm from "./components/ContactForm";
 import ContactList from "./components/ContactList";
 import Filter from "./components/Filter";
 import AppBar from "components/AppBar/AppBar";
-
-import "./App.css";
-import { authOperations, authSelectors } from "redux/auth";
 import PrivateRoute from "components/PrivateRoute";
 import PublicRoute from "components/PublicRoute";
 import Container from "components/Container";
+import "./App.css";
 
 const HomeView = lazy(() => import("views/HomeView"));
 const LoginView = lazy(() => import("views/LoginView"));
