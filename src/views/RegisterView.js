@@ -19,9 +19,6 @@ import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import Button from "@material-ui/core/Button";
 
 export default function RegisterView() {
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const [values, setValues] = useState({
     amount: "",
@@ -137,45 +134,8 @@ export default function RegisterView() {
         </Grid>
 
         <Button variant="outlined" type="submit" className={s.btn_submit}>
-          Log In
-        </Button>
-
-        {/* <label className={s.label}>
-          Name
-          <input
-            className={s.input}
-            type="text"
-            name="name"
-            value={name}
-            onChange={handleChange}
-          />
-        </label> */}
-
-        {/* <label className={s.label}>
-          Email
-          <input
-            className={s.input}
-            type="email"
-            name="email"
-            value={email}
-            onChange={handleChange}
-          />
-        </label>
-
-        <label className={s.label}>
-          Password
-          <input
-            className={s.input}
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-          />
-        </label>
-
-        <button className={s.btn_submit} type="submit">
           Register
-        </button> */}
+        </Button>
       </form>
     </div>
   );
