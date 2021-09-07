@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { authOperations, authSelectors } from "redux/auth";
 import defaultAvatar from "../icons/dungeon.svg";
 import ExitToAppRoundedIcon from "@material-ui/icons/ExitToAppRounded";
+import IconButton from "@material-ui/core/IconButton";
 import s from "./UserMenu.module.css";
 
 export default function UserMenu() {
@@ -12,15 +13,17 @@ export default function UserMenu() {
     <div className={s.container}>
       <img src={defaultAvatar} alt="" width="32" className={s.avatar} />
       <h3 className={s.name}>Hello, {name}</h3>
-      <button
-        className={s.logOut_btn}
+      <IconButton
+        size="small"
+        variant="outlined"
+        className={s.MuiIconButton_root}
         type="button"
         onClick={() => {
           dispatch(authOperations.logOut());
         }}
       >
         <ExitToAppRoundedIcon />
-      </button>
+      </IconButton>
     </div>
   );
 }

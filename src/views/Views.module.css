@@ -5,6 +5,7 @@
   border: 1px solid #282c34a8;
 }
 .page_title {
+  text-align: center;
   color: rgb(59, 11, 73);
 }
 .form {
@@ -16,6 +17,7 @@
   margin-bottom: 15px;
 }
 .input {
+  width: 255px;
   background: inherit;
 }
 .btn_submit {
@@ -23,7 +25,7 @@
   height: 40px;
   margin-left: 50px;
   margin-top: 12px;
-  border-radius: 2px;
+  border-radius: 4px;
   color: rgb(59, 11, 73);
   background-color: rgba(209, 174, 174, 0.39);
   border: 2px solid rgba(131, 30, 131, 0.712);

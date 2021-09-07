@@ -23,3 +23,9 @@
   color: #ffff;
   background-color: rgb(59, 11, 73);
 }
+.MuiIconButton_root {
+  composes: logOut_btn;
+}
+.MuiIconButton_root:hover {
+  background-color: rgb(59, 11, 73);
+}
